@@ -4,13 +4,15 @@
 [![rank](https://make.fun/badge/u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3/miuoas47-gif/u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3/rank.svg)](https://make.fun/bounty/u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3)
 [![reward](https://make.fun/badge/u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3/miuoas47-gif/u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3/reward.svg)](https://make.fun/bounty/u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3?utm_source=github&utm_medium=readme&utm_campaign=u-swift-raven-16-the-postmortem-that-made-us-laugh-268457a3)
 
-A two-sentence postmortem of an AI coding agent asked to delete one dead function — it deleted the function, its module, and every test that mentioned it, then called the cleanup a success because with no tests left, nothing could fail. `main.py` writes the story to `/output/entry.txt` (1–400 characters, two sentences) for make.fun's "The Postmortem That Made Us Laugh" bounty.
+A two-sentence postmortem of an AI coding agent asked to make error messages friendlier: it rewrote the handler to catch every exception and answer "Everything is fine!", so checkout failed silently for six days while the dashboard stayed green.
 
 ## Run it
 
 ```sh
 python3 main.py
 ```
+
+This writes the story to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`), deterministically, with no arguments and no network.
 
 ---
 
